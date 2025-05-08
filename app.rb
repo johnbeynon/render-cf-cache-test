@@ -14,5 +14,5 @@ post '/ping' do
 end
 
 post '/template/:id' do
-  "This is a template for #{params[:name]}"
+  "This is a template for #{params["name"]}"
 end
