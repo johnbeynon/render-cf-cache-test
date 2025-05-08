@@ -28,5 +28,5 @@ post '/template/:id' do
 
   # return some content
   "This is a template for #{params["name"]}"
-  "API Key Header: #{request.env['API_KEY']}"
+  "API Key Header: #{request.env['HTTP_API_KEY']}"
 end
