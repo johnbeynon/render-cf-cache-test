@@ -14,5 +14,6 @@ post '/ping' do
 end
 
 post '/template/:id' do
+  puts params.inspect
   "This is a template for #{params["name"]}"
 end
