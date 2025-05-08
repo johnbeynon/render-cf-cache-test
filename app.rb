@@ -1,5 +1,6 @@
 # myapp.rb
 require 'sinatra'
+require 'active_support/all'
 
 before do
   if request.body.size > 0
@@ -21,6 +22,10 @@ post '/ping' do
 end
 
 post '/template/:id' do
-  puts @params.inspect
+  puts "API Key: #{params["api_key"]}"
+  puts "Template ID: #{params["id"]}"
+  puts "Template Name: #{params["name"]}"
+
+  # return some content
   "This is a template for #{params["name"]}"
 end
